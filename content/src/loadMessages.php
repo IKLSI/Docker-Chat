@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('db', 'root', 'example', 'chat');
+$mysqli = new mysqli('db', 'root', 'dbsae', 'chat');
 
 if ($mysqli->connect_error) {
 	die('Erreur de connexion à la base de données (' . $mysqli->connect_errno . ') '

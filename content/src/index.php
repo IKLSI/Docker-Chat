@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('db', 'root', 'example', 'chat');
+$mysqli = new mysqli('db', 'root', 'dbsae', 'chat');
 if ($mysqli->connect_error) {
 	die('Erreur de connexion (' . $mysqli->connect_errno . ') '
 		. $mysqli->connect_error);
@@ -12,7 +12,7 @@ if (isset($_POST['valider'])) {
 		$message = nl2br(htmlspecialchars($_POST['message']));
 		$heure = date('Y-m-d H:i:s', strtotime('+2 hours'));
 		$insererMessage = $mysqli->prepare("INSERT INTO utilisateurchat(pseudoUtilisateur, messageUtilisateur, heure) VALUES(?, ?, ?)");
-		$insererMessage->bind_param("sss", $pseudo, $message, $heure);
+		$insererMessage->bind_param($pseudo, $message, $heure);
 		$insererMessage->execute();
 	} else {
 		$erreur = "Veuillez entrer un pseudo";
