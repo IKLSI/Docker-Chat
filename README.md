@@ -25,7 +25,12 @@
 
 ## Piste d'amélioration
 
-* Automatisation de la création de la base de données via le docker-compose.yml afin d'éviter à l'utilisateur de le faire manuellement
+* Automatisation de la création de la base de données lors du build du container afin d'éviter à l'utilisateur de le faire manuellement.
+
+## Contraintes 
+
+* Initialement nous n'avions qu'un dockerfile cependant nous avons remarqué que nous ne pouvions pas utiliser plusieurs services (php / mysql) en même temps en procédant de cette façon. 
+* Nous avond donc dû créer également un docker-compose afin de répondre à ces critères.
 
 ## Autres projets 
 
