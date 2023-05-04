@@ -30,7 +30,7 @@
 ## Contraintes 
 
 * Initialement nous n'avions qu'un dockerfile cependant nous avons remarqué que nous ne pouvions pas utiliser plusieurs services (php / mysql) en même temps en procédant de cette façon. 
-* Nous avond donc dû créer également un docker-compose afin de répondre à ces critères.
+* Nous avons donc dû créer également un docker-compose afin de répondre à ces critères.
 
 ## Autres projets 
 
